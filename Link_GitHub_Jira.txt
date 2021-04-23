@@ -1,0 +1,3 @@
+Github: https://github.com/taleduykhang/BOF_CCPTPM.git
+
+Jira: https://bof-ccptpm.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=WC
