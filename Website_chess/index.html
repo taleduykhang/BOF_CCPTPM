@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Gameserver Example</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/chess.css" />
+ 
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="js/chess.js"></script>
+  
+
+</head>
+
+<body>
+
+  <!-- <div class="container">
+   
+    <div class="row">
+      <div class="col-7">
+        <div id="wraper"></div>
+        <div id="parts">
+          <p class="p1">You</p>
+          <p class="p2"> Friend</p>
+        </div>
+        <div id="instruct">
+          <h3>It turns to </h3>
+          <p> 1 </p>
+        </div>
+        <div id="tools">
+          <input type="button" id="rs" value="reset"></input>
+        </div>
+        <script type="text/javascript">
+          $(function () {
+
+            var chess = new Chess('#wraper');
+
+            $('#rs').click(function () {
+              chess = chess.reset();
+              $("#instruct p").removeClass('vs').text("1");
+            });
+
+          });
+        </script>
+      </div>
+
+    
+      <div class="col-3">
+        
+      </div>
+
+    </div>
+
+
+  </div> -->
+  <ul class="pages">
+    <li class="chat page">
+      <div style="flex-direction: column;" class='gameButtons'>
+        <button class='joinGame' placeholder="Join Game" />Join Game</button>
+
+        <button class='leaveGame' placeholder="Leave Game" />Exit Game</button>
+
+
+      </div>
+      <div class="chatArea">
+        <ul class="messages"></ul>
+      </div>
+      <input class="inputMessage" placeholder="Type here..." />
+    </li>
+    <li class="usersList">
+      <div class="usersList">
+        <ul class="Users"></ul>
+      </div>
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">Nickname?</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+        <br />
+
+    </li>
+  </ul>
+  <div id="wraper"></div>
+  <div id="parts">
+    <p class="p1">You</p>
+    <p class="p2"> Friend</p>
+  </div>
+  <div id="instruct">
+    <h3>It turns to </h3>
+    <p> 1 </p>
+  </div>
+  <div id="tools">
+    <input type="button" id="rs" value="reset"></input>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+
+      var chess = new Chess('#wraper');
+
+      $('#rs').click(function () {
+        chess = chess.reset();
+        $("#instruct p").removeClass('vs').text("1");
+      });
+
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+
+
+</body>
+
+</html>
